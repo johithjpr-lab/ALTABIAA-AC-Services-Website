@@ -25,7 +25,7 @@ export default function SEO({
     email: COMPANY.email,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Birkat Al Awamer",
+      addressLocality: "Doha, Qatar",
       addressCountry: "QA",
     },
     areaServed: "Qatar",

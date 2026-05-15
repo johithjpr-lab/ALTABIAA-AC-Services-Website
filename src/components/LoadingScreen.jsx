@@ -1,20 +1,17 @@
 import { motion, AnimatePresence } from "framer-motion";
+import CompanyLogo from "./CompanyLogo";
 
 export default function LoadingScreen({ loading }) {
   return (
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-navy"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-navy-deep"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            src="/logo.png"
-            alt="Al Tabiaa Cooling Service"
-            className="mb-6 h-24 w-auto object-contain md:h-28"
-          />
+          <CompanyLogo size="loader" onNavy className="mb-6" />
           <motion.div
             className="loader-ring h-12 w-12"
             animate={{ rotate: 360 }}

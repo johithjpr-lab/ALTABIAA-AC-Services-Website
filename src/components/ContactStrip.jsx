@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { COMPANY } from "../data/site";
+import { IMAGES } from "../data/images";
 
 export default function ContactStrip() {
   return (
     <section className="section-pad relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-sky/20 via-navy to-accent/10" />
+      <img
+        src={IMAGES.fleetVan}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-navy-deep/92" />
       <div className="container-page relative text-center">
         <h2
           className="text-xl font-bold text-white sm:text-2xl md:text-3xl"

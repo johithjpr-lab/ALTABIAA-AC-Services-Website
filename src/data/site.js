@@ -1,3 +1,5 @@
+import { IMAGES } from "./images";
+
 export const COMPANY = {
   name: "Al Tabiaa Cooling Service",
   nameAr: "الطبيعة لخدمات التكييف",
@@ -6,7 +8,7 @@ export const COMPANY = {
   phone: "+974 30612147",
   phoneTel: "+97430612147",
   email: "altabiaacoolingservice@gmail.com",
-  location: "Birkat Al Awamer, Qatar",
+  location: "Doha, Qatar",
   whatsapp: "https://wa.me/97430612147",
   mapEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.0!2d51.4!3d25.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEyJzAwLjAiTiA1McKwMjQnMDAuMCJF!5e0!3m2!1sen!2sqa!4v1",
@@ -29,36 +31,48 @@ export const HOME_SERVICES = [
     title: "AC Services",
     description: "Installation, repair, and maintenance for all split and window AC units across Qatar.",
     path: "/ac-services",
+    image: IMAGES.acCleaningBanner,
+    imageVariant: "square",
   },
   {
     icon: "Wind",
     title: "HVAC Services",
     description: "Complete heating, ventilation, and air conditioning solutions for homes and businesses.",
     path: "/hvac-services",
+    image: IMAGES.hvacCollage,
+    imageVariant: "wide",
   },
   {
     icon: "Building2",
     title: "VRF / VRV Systems",
     description: "Energy-efficient variable refrigerant flow systems for commercial and large-scale projects.",
     path: "/vrf-vrv-systems",
+    image: IMAGES.vrfCompressor,
+    imageVariant: "wide",
   },
   {
     icon: "WashingMachine",
     title: "Appliance Services",
     description: "Expert repair for refrigerators, washers, dryers, and all major home appliances.",
     path: "/appliance-services",
+    image: IMAGES.refrigeratorBanner,
+    imageVariant: "square",
   },
   {
     icon: "Sparkles",
     title: "AC Cleaning & Repair",
     description: "Deep cleaning, coil servicing, gas refill, and preventive maintenance packages.",
     path: "/ac-services",
+    image: IMAGES.acCleaningPromo,
+    imageVariant: "square",
   },
   {
     icon: "Home",
     title: "Home Appliances",
-    description: "Reliable servicing for ovens, dishwashers, microwaves, and kitchen appliances.",
+    description: "Reliable servicing for refrigerators, washing machines, and kitchen appliances.",
     path: "/appliance-services",
+    image: IMAGES.washingMachineBanner,
+    imageVariant: "square",
   },
 ];
 
@@ -74,7 +88,7 @@ export const USP_ITEMS = [
   {
     icon: "Zap",
     title: "Fast & Reliable",
-    description: "Same-day service available with rapid response across Birkat Al Awamer and nearby areas.",
+    description: "Same-day service available with rapid response across Doha, Qatar and nearby areas.",
     stat: 24,
     suffix: "/7",
     statLabel: "Support",
@@ -143,7 +157,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Sarah Khan",
-    role: "Villa Owner, Birkat Al Awamer",
+    role: "Villa Owner, Doha, Qatar",
     rating: 5,
     quote:
       "Their maintenance package saved us from costly breakdowns. Highly recommend for anyone in Qatar needing reliable HVAC.",

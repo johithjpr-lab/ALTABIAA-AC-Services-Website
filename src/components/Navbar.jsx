@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronRight } from "lucide-react";
 import { NAV_LINKS, COMPANY } from "../data/site";
+import CompanyLogo from "./CompanyLogo";
 import OfferBanner from "./OfferBanner";
 
 export default function Navbar() {
@@ -40,7 +41,7 @@ export default function Navbar() {
   return (
     <header className="site-header fixed inset-x-0 top-0 z-50">
       <div
-        className={`border-b border-white/10 bg-navy/95 backdrop-blur-md transition-shadow ${
+        className={`border-b border-white/10 bg-navy-deep/98 backdrop-blur-md transition-shadow ${
           scrolled ? "shadow-lg shadow-black/25" : ""
         }`}
       >
@@ -50,15 +51,9 @@ export default function Navbar() {
             <Link
               to="/"
               className="flex min-w-0 shrink-0 items-center"
-              style={{ maxWidth: "min(52vw, 11rem)" }}
               onClick={() => setOpen(false)}
             >
-              <img
-                src="/logo.png"
-                alt={COMPANY.name}
-                className="h-8 w-full object-contain object-left sm:h-9 md:h-10 xl:h-11"
-                loading="eager"
-              />
+              <CompanyLogo size="nav" />
             </Link>
 
             {/* Desktop nav — 1280px+ */}

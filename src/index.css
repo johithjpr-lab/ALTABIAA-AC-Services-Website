@@ -5,8 +5,9 @@
 @import "swiper/css/pagination";
 
 @theme {
-  --color-navy: #0d1b2a;
-  --color-navy-light: #1b2838;
+  --color-navy: #001833;
+  --color-navy-light: #002952;
+  --color-navy-deep: #000c1a;
   --color-sky: #1e88e5;
   --color-sky-light: #42a5f5;
   --color-accent: #f57c00;
@@ -21,7 +22,7 @@
 
 @layer base {
   :root {
-    --nav-row-height: 3.5rem;
+    --nav-row-height: 4.25rem;
     --offer-height: 2.5rem;
     --site-offset: calc(var(--nav-row-height) + var(--offer-height));
     --fab-bottom: 5.5rem;
@@ -29,7 +30,7 @@
 
   @media (min-width: 640px) {
     :root {
-      --nav-row-height: 4rem;
+      --nav-row-height: 5rem;
       --offer-height: 2.75rem;
       --fab-bottom: 1.25rem;
     }
@@ -37,7 +38,7 @@
 
   @media (min-width: 1024px) {
     :root {
-      --nav-row-height: 4.25rem;
+      --nav-row-height: 5.5rem;
     }
   }
 
@@ -47,7 +48,7 @@
   }
 
   body {
-    @apply bg-navy font-sans text-white antialiased;
+    @apply bg-navy-deep font-sans text-white antialiased;
     overflow-x: hidden;
     min-height: 100dvh;
   }
@@ -183,6 +184,31 @@
 
   .btn-block-mobile {
     @apply w-full justify-center sm:w-auto;
+  }
+
+  /* Client images — fill container width, full image visible */
+  .brand-img-frame {
+    @apply relative w-full overflow-hidden bg-navy-deep;
+  }
+
+  .brand-img-frame img {
+    @apply block h-full w-full object-contain;
+  }
+
+  .brand-img-frame--square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .brand-img-frame--wide {
+    aspect-ratio: 4 / 3;
+  }
+
+  .brand-img-frame--compact {
+    @apply mx-auto max-w-[280px];
+  }
+
+  .brand-img-frame--flush {
+    @apply rounded-none rounded-t-2xl;
   }
 
   .glow-sky {

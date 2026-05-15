@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { Snowflake, Wind, Thermometer, Fan } from "lucide-react";
 import { COMPANY } from "../../data/site";
+import { IMAGES } from "../../data/images";
+import CompanyLogo from "../CompanyLogo";
 import Particles from "../Particles";
 
 const FLOATING_ICONS = [
@@ -52,14 +54,13 @@ export default function Hero() {
     >
       <div className="hero-bg absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1631545806609-8b0e6b6f4b8a?w=1920&q=80"
-          alt=""
-          className="h-full w-full object-cover"
+          src={IMAGES.heroAcOnly}
+          alt="Air conditioning unit"
+          className="h-full w-full object-cover object-center"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/75 to-navy" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgb(30_136_229/0.25),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgb(245_124_0/0.12),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/90 via-navy/85 to-navy-deep" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgb(30_136_229/0.12),transparent_55%)]" />
       </div>
 
       <Particles count={25} />
@@ -89,13 +90,16 @@ export default function Hero() {
       ))}
 
       <div ref={contentRef} className="container-page relative z-10 w-full">
+        <CompanyLogo size="hero" onNavy className="mb-4 sm:mb-6" />
         <p className="text-xs font-medium tracking-widest text-sky-light uppercase sm:text-sm">
           {COMPANY.nameAr}
         </p>
         <h1 className="mt-3 max-w-4xl text-3xl font-bold leading-tight text-white sm:mt-4 sm:text-4xl md:text-5xl lg:text-6xl">
-          <span className="text-gradient">{COMPANY.tagline}</span>
+          Beat the Heat. <span className="text-gradient">Stay Cool!</span>
         </h1>
-        <p className="mt-3 text-base text-white/70 sm:mt-4 sm:text-lg md:text-xl">{COMPANY.subtitle}</p>
+        <p className="mt-3 text-base text-white/70 sm:mt-4 sm:text-lg md:text-xl">
+          Professional AC Services You Can Trust
+        </p>
         <p className="mt-2 text-sm text-white/50">{COMPANY.location}</p>
 
         <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">

@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { HOME_SERVICES } from "../../data/site";
 import { DynamicIcon } from "../IconMap";
+import BrandImage from "../BrandImage";
 import SectionHeader from "../SectionHeader";
 
 export default function ServicesSection() {
   return (
-    <section className="section-pad">
+    <section className="section-pad bg-navy-deep">
       <div className="container-page">
         <SectionHeader
           label="Our Services"
@@ -20,8 +21,17 @@ export default function ServicesSection() {
               key={service.title}
               data-aos="fade-up"
               data-aos-delay={i * 80}
-              className="group glass flex h-full flex-col rounded-2xl p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-sky/40 hover:glow-sky"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-light transition-all duration-300 hover:-translate-y-1 hover:border-sky/40 hover:glow-sky"
             >
+              {service.image && (
+                <BrandImage
+                  src={service.image}
+                  alt={service.title}
+                  variant={service.imageVariant || "square"}
+                  flush
+                />
+              )}
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-sky/15 text-sky-light sm:h-14 sm:w-14">
                 <DynamicIcon name={service.icon} className="h-6 w-6 sm:h-7 sm:w-7" />
               </div>
@@ -34,6 +44,7 @@ export default function ServicesSection() {
                 Read More
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
+              </div>
             </article>
           ))}
         </div>

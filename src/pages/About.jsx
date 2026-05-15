@@ -3,7 +3,11 @@ import { Shield, Target, Heart } from "lucide-react";
 import SEO from "../components/SEO";
 import ContactStrip from "../components/ContactStrip";
 import SectionHeader from "../components/SectionHeader";
+import CompanyLogo from "../components/CompanyLogo";
+import BrandImage from "../components/BrandImage";
+import FleetShowcase from "../components/home/FleetShowcase";
 import { COMPANY } from "../data/site";
+import { IMAGES } from "../data/images";
 
 const VALUES = [
   {
@@ -23,6 +27,12 @@ const VALUES = [
   },
 ];
 
+const TEAM_IMAGES = [
+  { src: IMAGES.acTechnicianService, alt: "AC technician servicing unit" },
+  { src: IMAGES.acTechnicianCustomer, alt: "Technician explaining AC service to customer" },
+  { src: IMAGES.hvacCollage, alt: "HVAC technicians at work" },
+];
+
 export default function About() {
   return (
     <>
@@ -33,9 +43,14 @@ export default function About() {
       />
 
       <section className="page-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(30_136_229/0.2),transparent_60%)]" />
+        <img
+          src={IMAGES.heroFlyer}
+          alt={COMPANY.name}
+          className="absolute inset-0 h-full w-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy/90 to-navy-deep/80" />
         <div className="container-page relative">
+          <CompanyLogo size="hero" onNavy className="mb-4" />
           <p className="text-xs font-medium tracking-widest text-sky-light uppercase sm:text-sm" data-aos="fade-up">
             About Us
           </p>
@@ -49,7 +64,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="section-pad bg-navy">
         <div className="container-page">
           <div className="grid-split">
             <div data-aos="fade-right">
@@ -68,22 +83,37 @@ export default function About() {
                 Get in Touch
               </Link>
             </div>
-            <div className="glass rounded-2xl p-6 sm:p-8" data-aos="fade-left">
-              <img src="/logo.png" alt={COMPANY.name} className="mx-auto h-32 w-auto sm:h-40" />
+            <div className="rounded-2xl border border-white/10 bg-navy-light p-6 sm:p-8" data-aos="fade-left">
+              <CompanyLogo size="about" className="mx-auto" />
               <p className="mt-4 text-center text-sm text-white/60 sm:mt-6">{COMPANY.nameAr}</p>
             </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-3 sm:gap-6">
+            {TEAM_IMAGES.map((img, i) => (
+              <div
+                key={img.alt}
+                className="overflow-hidden rounded-2xl border border-white/10 shadow-lg"
+                data-aos="fade-up"
+                data-aos-delay={i * 80}
+              >
+                <BrandImage src={img.src} alt={img.alt} variant="wide" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section-pad border-t border-white/10">
+      <FleetShowcase />
+
+      <section className="section-pad border-t border-white/10 bg-navy-deep">
         <div className="container-page">
           <SectionHeader title="Our Core Values" />
           <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {VALUES.map((v, i) => (
               <div
                 key={v.title}
-                className="glass rounded-2xl p-5 text-center sm:p-6"
+                className="rounded-2xl border border-white/10 bg-navy p-5 text-center sm:p-6"
                 data-aos="fade-up"
                 data-aos-delay={i * 100}
               >

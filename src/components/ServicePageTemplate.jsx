@@ -3,7 +3,9 @@ import { CheckCircle2 } from "lucide-react";
 import SEO from "./SEO";
 import FAQ from "./FAQ";
 import ContactStrip from "./ContactStrip";
+import BrandImage from "./BrandImage";
 import SectionHeader from "./SectionHeader";
+import { IMAGES } from "../data/images";
 
 export default function ServicePageTemplate({ data }) {
   return (
@@ -12,12 +14,12 @@ export default function ServicePageTemplate({ data }) {
 
       <section className="page-hero relative overflow-hidden">
         <img
-          src={data.gallery[0]}
+          src={data.slug === "ac-services" ? IMAGES.heroAcOnly : data.gallery[0]}
           alt={data.title}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/96 via-navy/90 to-navy-deep/75" />
         <div className="container-page relative">
           <p className="text-xs font-medium tracking-widest text-sky-light uppercase sm:text-sm" data-aos="fade-up">
             Al Tabiaa Cooling Service
@@ -39,7 +41,7 @@ export default function ServicePageTemplate({ data }) {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="section-pad bg-navy">
         <div className="container-page">
           <div className="grid-split">
             <div data-aos="fade-right">
@@ -56,14 +58,12 @@ export default function ServicePageTemplate({ data }) {
             </div>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4" data-aos="fade-left">
               {data.gallery.map((img, i) => (
-                <img
+                <BrandImage
                   key={img}
                   src={img}
                   alt={`${data.title} ${i + 1}`}
-                  className={`w-full rounded-xl object-cover shadow-xl sm:rounded-2xl ${
-                    i === 0 ? "sm:col-span-2 sm:h-52 md:h-56" : "h-36 sm:h-40"
-                  }`}
-                  loading="lazy"
+                  variant={i === 0 ? "wide" : "square"}
+                  className={`shadow-xl ${i === 0 ? "sm:col-span-2" : ""}`}
                 />
               ))}
             </div>
@@ -71,7 +71,7 @@ export default function ServicePageTemplate({ data }) {
         </div>
       </section>
 
-      <section className="section-pad border-t border-white/10 bg-navy-light/50">
+      <section className="section-pad border-t border-white/10 bg-navy-deep">
         <div className="container-page max-w-3xl">
           <SectionHeader
             title="Frequently Asked Questions"

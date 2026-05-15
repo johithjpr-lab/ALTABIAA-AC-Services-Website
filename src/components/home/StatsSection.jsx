@@ -16,8 +16,7 @@ function StatItem({ value, suffix, label }) {
 
 export default function StatsSection() {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 py-10 sm:py-14 md:py-16">
-      <div className="absolute inset-0 bg-gradient-to-r from-sky/10 via-transparent to-accent/10" />
+    <section className="relative overflow-hidden border-y border-white/10 bg-navy py-10 sm:py-14 md:py-16">
       <div className="container-page relative grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
         {STATS.map((stat) => (
           <StatItem key={stat.label} {...stat} />

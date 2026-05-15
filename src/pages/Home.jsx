@@ -1,5 +1,7 @@
 import SEO from "../components/SEO";
 import Hero from "../components/home/Hero";
+import PromoShowcase from "../components/home/PromoShowcase";
+import FleetShowcase from "../components/home/FleetShowcase";
 import ServicesSection from "../components/home/ServicesSection";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import StatsSection from "../components/home/StatsSection";
@@ -12,10 +14,12 @@ export default function Home() {
     <>
       <SEO />
       <Hero />
+      <PromoShowcase />
       <ServicesSection />
       <StatsSection />
       <WhyChooseUs />
       <BrandsSlider />
+      <FleetShowcase />
       <Testimonials />
       <ContactStrip />
     </>

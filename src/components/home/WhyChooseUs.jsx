@@ -1,6 +1,8 @@
 import { USP_ITEMS } from "../../data/site";
+import { IMAGES } from "../../data/images";
 import { DynamicIcon } from "../IconMap";
 import { useCounter } from "../../hooks/useCounter";
+import BrandImage from "../BrandImage";
 import SectionHeader from "../SectionHeader";
 
 function StatCard({ stat, suffix, statLabel }) {
@@ -18,22 +20,30 @@ function StatCard({ stat, suffix, statLabel }) {
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-pad relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sky/5 to-transparent" />
+    <section className="section-pad relative overflow-hidden bg-navy-deep">
       <div className="container-page relative">
-        <SectionHeader
-          label="Why Choose Us"
-          title="Trusted HVAC Experts in Qatar"
-          description="We deliver premium cooling solutions with transparency, speed, and guaranteed quality."
-        />
+        <div className="grid-split items-start">
+          <div className="mb-10 lg:mb-0" data-aos="fade-right">
+            <SectionHeader
+              label="Why Choose Us"
+              title="Trusted HVAC Experts in Qatar"
+              description="We deliver premium cooling solutions with transparency, speed, and guaranteed quality."
+            />
+            <BrandImage
+              src={IMAGES.acTechnicianService}
+              alt="Al Tabiaa expert technician"
+              variant="wide"
+              className="mt-8 shadow-xl"
+            />
+          </div>
 
-        <div className="mt-10 grid-cards-4 sm:mt-14">
+        <div className="mt-10 grid-cards-2 sm:mt-0 lg:grid-cols-2">
           {USP_ITEMS.map((item, i) => (
             <article
               key={item.title}
               data-aos="fade-up"
               data-aos-delay={i * 100}
-              className="glass group rounded-2xl p-5 sm:p-6 transition-all hover:border-sky/50 hover:shadow-[0_0_40px_rgb(30_136_229/0.2)]"
+              className="group rounded-2xl border border-white/10 bg-navy p-5 sm:p-6 transition-all hover:border-sky/50 hover:shadow-[0_0_40px_rgb(30_136_229/0.2)]"
             >
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent transition-transform group-hover:scale-110 sm:h-12 sm:w-12">
                 <DynamicIcon name={item.icon} className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -43,6 +53,7 @@ export default function WhyChooseUs() {
               <StatCard stat={item.stat} suffix={item.suffix} statLabel={item.statLabel} />
             </article>
           ))}
+        </div>
         </div>
       </div>
     </section>

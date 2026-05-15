@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { COMPANY, NAV_LINKS, SOCIAL_LINKS } from "../data/site";
+import CompanyLogo from "./CompanyLogo";
 import { DynamicIcon } from "./IconMap";
 import Container from "./Container";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-12 overflow-hidden border-t border-white/10 bg-navy-light pt-12 pb-8 sm:mt-16 sm:pt-16 lg:mt-20">
+    <footer className="relative mt-12 overflow-hidden border-t border-white/10 bg-navy pt-12 pb-8 sm:mt-16 sm:pt-16 lg:mt-20">
       <div className="footer-wave pointer-events-none opacity-20">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="h-12 w-full sm:h-16">
           <path
@@ -19,12 +20,7 @@ export default function Footer() {
       <Container className="relative">
         <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
-            <img
-              src="/logo.png"
-              alt={COMPANY.name}
-              className="mb-4 h-14 w-auto sm:h-16"
-              loading="lazy"
-            />
+            <CompanyLogo size="footer" className="mb-4" />
             <p className="text-sm text-white/55">{COMPANY.nameAr}</p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60">
               Premium HVAC, AC, and appliance services in Qatar. Your comfort is our priority.

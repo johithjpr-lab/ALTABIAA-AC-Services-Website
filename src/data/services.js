@@ -1,9 +1,11 @@
+import { IMAGES } from "./images";
+
 export const SERVICE_PAGES = {
   ac: {
     slug: "ac-services",
     title: "AC Services",
     metaDescription:
-      "Professional AC installation, repair, cleaning, and maintenance in Birkat Al Awamer, Qatar. Al Tabiaa Cooling Service — trusted local experts.",
+      "Professional AC installation, repair, cleaning, and maintenance in Doha, Qatar. Al Tabiaa Cooling Service — trusted local experts.",
     heroSubtitle: "Split, Window & Central AC Solutions",
     intro:
       "Keep your space perfectly cool with our comprehensive air conditioning services. From new installations to emergency repairs, we handle all AC brands and types across Qatar.",
@@ -16,9 +18,10 @@ export const SERVICE_PAGES = {
       "Preventive maintenance plans",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1631545806609-8b0e6b6f4b8a?w=600&q=80",
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80",
-      "https://images.unsplash.com/photo-1585771724684-38269b6632f7?w=600&q=80",
+      IMAGES.acCleaningBanner,
+      IMAGES.acTechnicianService,
+      IMAGES.acTechnicianCustomer,
+      IMAGES.acInstallationCollage,
     ],
     faqs: [
       {
@@ -31,7 +34,7 @@ export const SERVICE_PAGES = {
       },
       {
         q: "Do you offer same-day AC repair?",
-        a: "Yes, same-day service is available across Birkat Al Awamer and surrounding areas subject to scheduling.",
+        a: "Yes, same-day service is available across Doha, Qatar and surrounding areas subject to scheduling.",
       },
     ],
   },
@@ -52,9 +55,10 @@ export const SERVICE_PAGES = {
       "Commercial HVAC contracts",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80",
+      IMAGES.hvacCollage,
+      IMAGES.acInstallationCollage,
+      IMAGES.fleetVan,
+      IMAGES.acTechnicianService,
     ],
     faqs: [
       {
@@ -88,9 +92,10 @@ export const SERVICE_PAGES = {
       "Annual maintenance contracts",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80",
-      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+      IMAGES.vrfCompressor,
+      IMAGES.hvacCollage,
+      IMAGES.fleetPickup,
+      IMAGES.acCleaningPromo,
     ],
     faqs: [
       {
@@ -111,7 +116,7 @@ export const SERVICE_PAGES = {
     slug: "appliance-services",
     title: "Appliance Services",
     metaDescription:
-      "Home appliance repair in Qatar — refrigerators, washers, ovens, and more. Al Tabiaa Cooling Service, Birkat Al Awamer.",
+      "Home appliance repair in Qatar — refrigerators, washers, ovens, and more. Al Tabiaa Cooling Service, Doha, Qatar.",
     heroSubtitle: "Home & Kitchen Appliance Repair",
     intro:
       "Beyond cooling, our certified technicians repair and maintain all major home appliances — keeping your household running smoothly with minimal downtime.",
@@ -124,9 +129,10 @@ export const SERVICE_PAGES = {
       "Genuine spare parts supply",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
-      "https://images.unsplash.com/photo-1581578731548-7dd0c864aef8?w=600&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+      IMAGES.refrigeratorBanner,
+      IMAGES.washingMachineBanner,
+      IMAGES.refrigeratorCollage,
+      IMAGES.refrigeratorGauges,
     ],
     faqs: [
       {
@@ -135,7 +141,7 @@ export const SERVICE_PAGES = {
       },
       {
         q: "Do you offer home visit appliance repair?",
-        a: "Yes, our technicians come to your location in Birkat Al Awamer and across Qatar.",
+        a: "Yes, our technicians come to your location in Doha, Qatar and across Qatar.",
       },
       {
         q: "Is there a warranty on appliance repairs?",
