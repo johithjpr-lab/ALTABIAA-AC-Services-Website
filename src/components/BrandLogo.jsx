@@ -15,7 +15,7 @@ export default function BrandLogo({ brand, className = "" }) {
     <img
       src={brand.logo}
       alt={`${brand.name} logo`}
-      className={`max-h-10 w-auto max-w-[120px] object-contain brightness-0 invert opacity-90 transition-opacity group-hover:opacity-100 sm:max-h-12 sm:max-w-[140px] ${className}`}
+      className={`max-h-10 w-auto max-w-[120px] object-contain opacity-90 transition-opacity group-hover:opacity-100 sm:max-h-12 sm:max-w-[140px] ${className}`}
       loading="lazy"
       onError={() => setError(true)}
     />

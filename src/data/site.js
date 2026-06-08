@@ -114,35 +114,35 @@ export const USP_ITEMS = [
 export const BRANDS = [
   {
     name: "Samsung",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/320px-Samsung_Logo.svg.png",
+    logo: IMAGES.brandSamsung,
   },
   {
     name: "LG",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LG_logo_%282015%29.svg/320px-LG_logo_%282015%29.svg.png",
+    logo: IMAGES.brandLG,
   },
   {
     name: "GREE",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Gree_Electric_Appliances_logo.png/320px-Gree_Electric_Appliances_logo.png",
+    logo: IMAGES.brandGree,
   },
   {
     name: "O-General",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Daikin_logo.svg/320px-Daikin_logo.svg.png",
+    logo: IMAGES.brandOgeneral,
   },
   {
     name: "Hisense",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hisense_logo.svg/320px-Hisense_logo.svg.png",
+    logo: IMAGES.brandHisense,
   },
   {
     name: "Whirlpool",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Whirlpool_Corporation_Logo.svg/320px-Whirlpool_Corporation_Logo.svg.png",
+    logo: IMAGES.brandWhirlpool,
   },
   {
     name: "Bosch",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/320px-Bosch-logo.svg.png",
+    logo: IMAGES.brandBosch,
   },
   {
     name: "Panasonic",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Panasonic_logo_%28Blue%29.svg/320px-Panasonic_logo_%28Blue%29.svg.png",
+    logo: IMAGES.brandPanasonic,
   },
 ];
 

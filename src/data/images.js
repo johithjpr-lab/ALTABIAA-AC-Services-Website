@@ -18,4 +18,13 @@ export const IMAGES = {
   acInstallationCollage: `${base}/ac-installation-collage.png`,
   refrigeratorGauges: `${base}/refrigerator-gauges-repair.png`,
   vrfCompressor: `${base}/vrf-compressor-replacement.png`,
+  // Brand logos (place files under public/images/brands/)
+  brandHisense: `${base}/brands/hisense.svg`,
+  brandLG: `${base}/brands/lg.svg`,
+  brandPanasonic: `${base}/brands/panasonic.svg`,
+  brandSamsung: `${base}/brands/samsung.svg`,
+  brandWhirlpool: `${base}/brands/whirlpool.svg`,
+  brandGree: `${base}/brands/gree.svg`,
+  brandBosch: `${base}/brands/bosch.svg`,
+  brandOgeneral: `${base}/brands/o-general.svg`,
 };

@@ -11,7 +11,7 @@ export default function BrandsSlider() {
       <div className="container-page">
         <SectionHeader
           label="Brands We Service"
-          title="Authorized Brand Specialists"
+          title=" Brand Specialists"
           description="Certified repair and installation for leading AC & appliance brands in Qatar."
         />
       </div>
