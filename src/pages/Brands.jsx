@@ -35,12 +35,12 @@ export default function Brands() {
               <Link
                 key={brand.name}
                 to="/contact"
-                className="glass flex h-24 flex-col items-center justify-center gap-2 rounded-xl p-3 transition-all hover:border-sky/40 sm:h-28 sm:rounded-2xl sm:p-4"
+                className="flex h-24 flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white p-3 shadow-sm transition-all hover:border-sky/40 sm:h-28 sm:rounded-2xl sm:p-4"
                 data-aos="fade-up"
                 data-aos-delay={i * 50}
               >
                 <BrandLogo brand={brand} />
-                <span className="text-center text-[10px] text-white/50 sm:text-xs">{brand.name}</span>
+                <span className="text-center text-[10px] text-gray-500 sm:text-xs">{brand.name}</span>
               </Link>
             ))}
           </div>

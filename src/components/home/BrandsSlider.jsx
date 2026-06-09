@@ -25,7 +25,7 @@ export default function BrandsSlider() {
             <Link
               key={`${brand.name}-${i}`}
               to="/brands"
-              className="group glass flex h-14 min-w-[120px] shrink-0 items-center justify-center rounded-xl px-4 sm:h-18 sm:min-w-[150px] sm:px-6"
+              className="group flex h-14 min-w-[120px] shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white px-4 shadow-sm sm:h-18 sm:min-w-[150px] sm:px-6"
               title={brand.name}
             >
               <BrandLogo brand={brand} />
